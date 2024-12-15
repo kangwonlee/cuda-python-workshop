@@ -22,21 +22,14 @@ jobs:
         cache-suffix: "uv"
         cache-dependency-glob: "requirements.txt"
 
-    - name: Create venv
-      run: uv venv my_env
-
-    - name: setup environment
-      id: setup
-      run: |
-        source my_env/bin/activate
-        uv pip install -r requirements.txt
-
     - name: setup python
       id: setup_python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10.12'
-
+      run: |
+        uv python install 3.10.12
+        uv venv my_env
+        source my_env/bin/activate
+        uv pip install -r requirements.txt
+  
     - name: list packages
       id: list_pakcages
       run: |
