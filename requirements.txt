@@ -7,10 +7,10 @@
 #     if pkg in dep:
 #         print(f"- {pkg} = {ver}")
 
-jupyter
-notebook
-numba
-numpy
-pytest
-pytorch
-tensorflow
+cuda-python == 12.2.1
+ipython == 7.34.0
+notebook == 6.5.5
+numba == 0.60.0
+numpy == 1.26.4
+pytest == 8.3.4
+torch == 2.5.1+cu121
