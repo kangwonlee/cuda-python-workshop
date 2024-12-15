@@ -29,7 +29,7 @@ jobs:
       id: setup
       run: |
         source my_env/bin/activate
-        uv pip install -r ./utils/requirements.txt
+        uv pip install -r requirements.txt
 
     - name: setup python
       id: setup_python
