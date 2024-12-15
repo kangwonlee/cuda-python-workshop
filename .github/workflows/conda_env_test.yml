@@ -20,7 +20,7 @@ jobs:
         version: "latest"
         enable-cache: true
         cache-suffix: "uv"
-        cache-dependency-glob: "utils/requirements.txt"
+        cache-dependency-glob: "requirements.txt"
 
     - name: Create venv
       run: uv venv my_env
