@@ -45,7 +45,9 @@ jobs:
 
     - name: check links
       id: links
-      run: python -m pytest ./tests/test_check_links_in_ipynb.py ./utils/tests/
+      run:  |
+        source my_env/bin/activate
+        python -m pytest ./tests/test_check_links_in_ipynb.py ./utils/tests/
 
   badges:
     name: Add Google Colab Badges
